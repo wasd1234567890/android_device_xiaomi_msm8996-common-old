@@ -112,7 +112,6 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
-    tinymix.vendor \
     libhfp \
     libsndmonitor
 

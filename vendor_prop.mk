@@ -170,7 +170,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.add_power_save=1 \
     telephony.lteOnCdmaDevice=1 \
     ro.telephony.use_old_mnc_mcc_format=true \
-    persist.vendor.radio.procedure_bytes=SKIP
+    persist.vendor.radio.procedure_bytes=SKIP \
+    persist.vendor.radio.aosp_usr_pref_sel=true
 
 # TimeService
 PRODUCT_PROPERTY_OVERRIDES += \

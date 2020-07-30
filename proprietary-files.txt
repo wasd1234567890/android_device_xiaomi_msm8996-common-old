@@ -441,7 +441,7 @@ lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidispl
 vendor/lib/libqmi_cci.so
 vendor/lib64/libqmi_cci.so
 
-# RIL - from LA.UM.8.6.r1-04400-89xx.0
+# RIL - from daisy V11.0.7.0.QDLMIXM
 -product/app/datastatusnotification/datastatusnotification.apk
 -product/app/embms/embms.apk
 product/etc/permissions/embms.xml
@@ -450,18 +450,27 @@ product/framework/embmslibrary.jar
 product/framework/qti-telephony-common.jar
 product/framework/uimlpalibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-product/app/QtiTelephonyService/QtiTelephonyService.apk
+product/etc/permissions/qcrilhook.xml
+product/etc/permissions/telephonyservice.xml
+product/framework/QtiTelephonyServicelibrary.jar
+product/framework/qcrilhook.jar
+
+# RIL - from LA.UM.8.6.r1-04400-89xx.0
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
 
-# IMS - from LA.UM.8.6.r1-04400-89xx.0
+# IMS - from daisy V11.0.7.0.QDLMIXM
 -product/app/imssettings/imssettings.apk
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 -product/priv-app/ims/ims.apk
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
+
+# IMS - from LA.UM.8.6.r1-04400-89xx.0
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 
 # QMI - from daisy V10.0.18.0 PDLMIXM
@@ -502,11 +511,6 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
 # RIL - from daisy V10.0.18.0 PDLMIXM
--app/QtiTelephonyService/QtiTelephonyService.apk
-etc/permissions/qcrilhook.xml
-etc/permissions/telephonyservice.xml
-framework/QtiTelephonyServicelibrary.jar
-framework/qcrilhook.jar
 vendor/bin/adpl
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd

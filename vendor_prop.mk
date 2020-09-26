@@ -239,6 +239,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.mt_sms_ack=30 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.report_codec=1 \

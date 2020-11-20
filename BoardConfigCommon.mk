@@ -117,7 +117,7 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 TARGET_USES_COLOR_METADATA := true
 
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+OVERRIDE_RS_DRIVER := librs_adreno.so
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -179,7 +179,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2020-04-05
+VENDOR_SECURITY_PATCH := 2020-09-05
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk

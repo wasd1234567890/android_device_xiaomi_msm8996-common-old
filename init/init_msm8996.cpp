@@ -77,9 +77,6 @@ void vendor_load_properties()
 {
     check_device();
 
-    property_override("dalvik.vm.heapstartsize", "8m");
-    property_override("dalvik.vm.heapgrowthlimit", "192m");
-    property_override("dalvik.vm.heapsize", "512m");
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);

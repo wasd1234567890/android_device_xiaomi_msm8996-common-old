@@ -100,6 +100,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpmhalservice.enable=1
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.vendor.dpm.feature=11
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true

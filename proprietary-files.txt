@@ -454,51 +454,9 @@ vendor/lib/libwfdhdcpcp.so
 vendor/lib/libwfdmmservice.so
 vendor/lib/libwfdmodulehdcpsession.so
 
-# QMI - from LA.UM.8.6.r1-04400-89xx.0
-vendor/lib/libqmi_cci.so
-vendor/lib64/libqmi_cci.so
-
-# RIL - from daisy V11.0.7.0.QDLMIXM
--product/app/datastatusnotification/datastatusnotification.apk
--product/app/embms/embms.apk
-product/etc/permissions/embms.xml
-product/etc/permissions/lpa.xml
-product/framework/embmslibrary.jar
-product/framework/uimlpalibrary.jar
--product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--product/app/QtiTelephonyService/QtiTelephonyService.apk
-product/etc/permissions/qcrilhook.xml
-product/etc/permissions/telephonyservice.xml
-product/framework/QtiTelephonyServicelibrary.jar
-product/framework/qcrilhook.jar
-
-# RIL - from LA.UM.9.6.2.r1-02800-89xx.0
-system_ext/framework/qti-telephony-common.jar
-
-# RIL - from LA.UM.8.6.r1-04400-89xx.0
-vendor/etc/init/dataadpl.rc
-vendor/etc/init/dataqti.rc
-vendor/etc/init/netmgrd.rc
-vendor/etc/init/vendor.qti.rmt_storage.rc
-vendor/etc/init/vendor.qti.tftp.rc
-
-# IMS - from daisy V11.0.7.0.QDLMIXM
--product/app/imssettings/imssettings.apk
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml
--product/priv-app/ims/ims.apk
-product/lib64/libimscamera_jni.so
-product/lib64/libimsmedia_jni.so
-
-# IMS - from LA.UM.8.6.r1-04400-89xx.0
-vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
-
 # QMI - from daisy V10.0.18.0 PDLMIXM
-etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
-etc/permissions/qti_permissions.xml
-lib/libdiag_system.so
-lib/libqmi_cci_system.so
-lib64/libdiag_system.so
-lib64/libqmi_cci_system.so
+etc/permissions/qti_permissions.xml:system_ext/etc/permissions/qti_permissions.xml
+lib64/libdiag_system.so:system_ext/lib64/libdiag_system.so
 vendor/bin/irsc_util
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
@@ -513,7 +471,7 @@ vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
-vendor/lib/libqmiservices.so
+-vendor/lib/libqmiservices.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -527,10 +485,21 @@ vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
-vendor/lib64/libqmiservices.so
+-vendor/lib64/libqmiservices.so
+
+# QMI - from LA.UM.9.6.2.r1-02800-89xx.0
+vendor/lib/libpdmapper.so
+vendor/lib/libqmi_cci.so
+vendor/lib64/libpdmapper.so
+vendor/lib64/libqmi_cci.so
+vendor/lib64/libqsocket.so
 
 # RIL - from daisy V10.0.18.0 PDLMIXM
-vendor/bin/adpl
+-app/embms/embms.apk:asystem_ext/pp/embms/embms.apk
+-app/QtiTelephonyService/QtiTelephonyService.apk:system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+framework/QtiTelephonyServicelibrary.jar:system_ext/framework/QtiTelephonyServicelibrary.jar
+framework/qcrilhook.jar:system_ext/framework/qcrilhook.jar
+framework/embmslibrary.jar:system_ext/framework/embmslibrary.jar
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
 vendor/bin/qti
@@ -538,18 +507,22 @@ vendor/bin/rmt_storage
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
+vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
+vendor/lib64/libnetmgr_nr_fusion.so
+vendor/lib64/libnetmgr_rmnet_ext.so
 vendor/lib64/libnlnetmgr.so
 vendor/lib64/liboemaids_vendor.so
-vendor/lib64/libpdmapper.so
+vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcmaputils.so
+vendor/lib64/libqcrilFramework.so
 vendor/lib64/libqrtr.so
-vendor/lib64/libqsocket.so
+vendor/lib64/libril-qc-hal-qmi.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so
@@ -559,11 +532,6 @@ vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so
-vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so
@@ -574,17 +542,31 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/radio/qcril_database/qcril.db
 
+# Radio - from LA.UM.9.6.2.r1-02800-89xx.0
+system_ext/framework/qti-telephony-common.jar
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+system_ext/etc/permissions/embms.xml
+system_ext/etc/permissions/qcrilhook.xml
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
+system_ext/etc/permissions/telephonyservice.xml
+vendor/bin/adpl
+vendor/etc/init/dataadpl.rc
+vendor/etc/init/dataqti.rc
+vendor/etc/init/netmgrd.rc
+vendor/etc/init/vendor.qti.rmt_storage.rc
+vendor/etc/init/vendor.qti.tftp.rc
+
 # IMS - from daisy V10.0.18.0 PDLMIXM
-lib64/com.qualcomm.qti.imscmservice@1.0.so
-lib64/com.qualcomm.qti.imscmservice@2.0.so
-lib64/com.qualcomm.qti.imscmservice@2.1.so
-lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
+lib64/com.qualcomm.qti.imscmservice@1.0.so:system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so
+lib64/com.qualcomm.qti.imscmservice@2.0.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so
+lib64/com.qualcomm.qti.imscmservice@2.1.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so
+lib64/com.qualcomm.qti.uceservice@2.0.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
+lib64/libmmrtpencoder.so:system_ext/lib64/libmmrtpencoder.so
+lib64/librcc.so:system_ext/lib64/librcc.so
+lib64/librtp_jni.so:system_ext/lib64/librtp_jni.so
+lib64/vendor.qti.imsrtpservice@1.0.so:system_ext/lib64/vendor.qti.imsrtpservice@1.0.so
+lib64/vendor.qti.ims.callinfo@1.0.so:system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -598,8 +580,8 @@ vendor/lib64/lib-imsSDP.so
 vendor/lib64/lib-imscmservice.so
 vendor/lib64/lib-imsdpl.so
 vendor/lib64/lib-imsqimf.so
-vendor/lib64/lib-imsrcsbaseimpl.so
 vendor/lib64/lib-imsrcs-v2.so
+vendor/lib64/lib-imsrcsbaseimpl.so
 vendor/lib64/lib-imsxml.so
 vendor/lib64/lib-rtpcommon.so
 vendor/lib64/lib-rtpcore.so
@@ -607,10 +589,31 @@ vendor/lib64/lib-rtpdaemoninterface.so
 vendor/lib64/lib-rtpsl.so
 vendor/lib64/lib-siputility.so
 vendor/lib64/lib-uceservice.so
-vendor/lib64/vendor.qti.ims.callinfo@1.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so
+vendor/lib64/vendor.qti.ims.callinfo@1.0.so
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
+
+# IMS - from LA.UM.9.6.2.r1-02800-89xx.0
+system_ext/lib64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so
+-system_ext/priv-app/ims/ims.apk
+vendor/etc/init/ims_rtp_daemon_legacy.rc
+vendor/etc/init/imsdatadaemon.rc
+vendor/etc/init/imsqmidaemon.rc
+vendor/etc/init/imsrcsd.rc
+vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
+system_ext/lib64/lib-imscamera.so
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
+vendor/lib64/lib-imsvtcore.so
 
 # Camera
 vendor/bin/mm-qcamera-daemon

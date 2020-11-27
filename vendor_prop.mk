@@ -126,6 +126,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.gfx_ubwc_disable=0 \
     vendor.gralloc.enable_fb_ubwc=1
 
+# HWUI
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hwui.render_ahead=1
+
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480 \

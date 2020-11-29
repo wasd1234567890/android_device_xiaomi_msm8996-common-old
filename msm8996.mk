@@ -397,7 +397,8 @@ PRODUCT_BOOT_JARS += \
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
-    device/xiaomi/msm8996-common
+    device/xiaomi/msm8996-common \
+    hardware/google/pixel
 
 # Tethering
 PRODUCT_PACKAGES += \

@@ -19,18 +19,20 @@
 
 #define TAP_TO_WAKE_NODE "/proc/touchpanel/double_tap_enable"
 
+#include "Power.h"
+
+#include <mutex>
+
 #include <android-base/file.h>
+#include <android-base/logging.h>
 #include <android-base/properties.h>
 #include <android-base/stringprintf.h>
 #include <android-base/strings.h>
 
-#include <mutex>
-
-#include <log/log.h>
+#include <utils/Log.h>
 #include <utils/Trace.h>
 
 #include "AudioStreaming.h"
-#include "Power.h"
 
 namespace android {
 namespace hardware {
@@ -67,7 +69,7 @@ Power::Power()
         android::base::WaitForProperty(kPowerHalInitProp, "1");
         mHintManager = HintManager::GetFromJSON(kPowerHalConfigPath);
         if (!mHintManager) {
-            ALOGE("Invalid config: %s", kPowerHalConfigPath);
+            LOG(FATAL) << "Invalid config: " << kPowerHalConfigPath;
         }
         mInteractionHandler = std::make_unique<InteractionHandler>(mHintManager);
         mInteractionHandler->Init();
@@ -205,14 +207,14 @@ Return<void> Power::setFeature(Feature feature, bool activate) {
 }
 
 Return<void> Power::getPlatformLowPowerStats(getPlatformLowPowerStats_cb _hidl_cb) {
-    ALOGE("getPlatformLowPowerStats not supported. Use IPowerStats HAL.");
+    LOG(FATAL) << "Invalid config: " << kPowerHalConfigPath;
     _hidl_cb({}, Status::SUCCESS);
     return Void();
 }
 
 // Methods from ::android::hardware::power::V1_1::IPower follow.
 Return<void> Power::getSubsystemLowPowerStats(getSubsystemLowPowerStats_cb _hidl_cb) {
-    ALOGE("getSubsystemLowPowerStats not supported. Use IPowerStats HAL.");
+    LOG(ERROR) << "getSubsystemLowPowerStats not supported. Use IPowerStats HAL.";
     _hidl_cb({}, Status::SUCCESS);
     return Void();
 }
@@ -351,17 +353,17 @@ Return<void> Power::debug(const hidl_handle &handle, const hidl_vec<hidl_string>
         int fd = handle->data[0];
 
         std::string buf(android::base::StringPrintf(
-            "HintManager Running: %s\n"
-            "VRMode: %s\n"
-            "CameraStreamingMode: %s\n"
-            "SustainedPerformanceMode: %s\n",
-            boolToString(mHintManager->IsRunning()), boolToString(mVRModeOn),
-            kCamStreamingHint.at(mCameraStreamingMode).c_str(),
-            boolToString(mSustainedPerfModeOn)));
+                "HintManager Running: %s\n"
+                "VRMode: %s\n"
+                "CameraStreamingMode: %s\n"
+                "SustainedPerformanceMode: %s\n",
+                boolToString(mHintManager->IsRunning()), boolToString(mVRModeOn),
+                kCamStreamingHint.at(mCameraStreamingMode).c_str(),
+                boolToString(mSustainedPerfModeOn)));
         // Dump nodes through libperfmgr
         mHintManager->DumpToFd(fd);
         if (!android::base::WriteStringToFd(buf, fd)) {
-            ALOGE("Failed to dump state to fd");
+            PLOG(ERROR) << "Failed to dump state to fd";
         }
         fsync(fd);
     }

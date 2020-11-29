@@ -16,7 +16,7 @@
 
 #define LOG_TAG "android.hardware.power@1.3-service.xiaomi-libperfmgr"
 
-#include <log/log.h>
+#include <android/log.h>
 #include <hidl/HidlTransportSupport.h>
 
 #include "Power.h"

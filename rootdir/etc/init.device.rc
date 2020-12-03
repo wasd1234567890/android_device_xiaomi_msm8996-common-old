@@ -71,16 +71,9 @@ on boot
     # add a cpuset for the camera daemon
     # we want little cores for camera
     mkdir /dev/cpuset/camera-daemon
-    write /dev/cpuset/camera-daemon/cpus 0-1
     chown system system /dev/cpuset/camera-daemon
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
-
-    # Create an stune group for the camera-daemon
-    mkdir /dev/stune/camera-daemon
-    chown system system /dev/stune/camera-daemon
-    chown system system /dev/stune/camera-daemon/tasks
-    chmod 0660 /dev/stune/camera-daemon/tasks
 
     # Access permission for fingerprint
     chown system system /sys/devices/soc/soc:fpc_fpc1020/irq

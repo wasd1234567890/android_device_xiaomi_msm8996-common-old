@@ -175,6 +175,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8996 \
     memtrack.msm8996 \
     libdisplayconfig \
+    libqdMetaData \
     vendor.display.config@1.0.vendor \
     libtinyxml \
     libvulkan

@@ -265,7 +265,6 @@ vendor/lib/libhdr_tm.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/libmm-hdcpmgr.so
-vendor/lib/librs_adreno.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -282,7 +281,6 @@ vendor/lib64/libhdr_tm.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/librs_adreno.so
 
 # Graphics - SDM - from LA.UM.9.6.2.r1-03300-89xx.0
 vendor/lib/libscalar.so

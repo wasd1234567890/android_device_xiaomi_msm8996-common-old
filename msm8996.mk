@@ -108,7 +108,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
-    tinymix
+    tinymix.vendor
 
 # Bluetooth
 PRODUCT_PACKAGES += \

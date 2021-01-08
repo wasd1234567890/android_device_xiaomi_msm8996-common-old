@@ -149,6 +149,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     service.qti.ims.enabled=1 \
     vendor.service.qti.ims.enabled=1
 
+# Iorap
+PRODUCT_PROPERTY_OVERRIDES += \
+    iorapd.perfetto.enable=true \
+    iorapd.readahead.enable=true
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.video.disable.ubwc=1 \

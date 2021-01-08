@@ -85,8 +85,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-filter=speed \
-    dalvik.vm.image-dex2oat-filter=speed \
     dalvik.vm.dex2oat64.enabled=true \
     dalvik.vm.heapgrowthlimit=192m \
     dalvik.vm.heapstartsize=8m \

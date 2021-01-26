@@ -3,7 +3,7 @@
      Copyright (C) 2016 The CyanogenMod Project
      Copyright (C) 2017-2020 The LineageOS Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
+     Licensed under the Apache License, Version 2.0 (the "License"
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
 
@@ -16,12 +16,10 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.settings.device"
-    android:versionCode="6"
-    android:versionName="2.5"
+    package="org.lineageos.pocketmode"
+    android:versionCode="1"
+    android:versionName="1.2"
     android:sharedUserId="android.uid.system">
-
-    <protected-broadcast android:name="org.lineageos.settings.device.CUST_UPDATE" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
@@ -30,42 +28,33 @@
         android:minSdkVersion="27" />
 
     <application
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/device_settings_app_name"
-        android:theme="@style/Theme.Main"
+        android:label="XiaomiPocketMode"
+        android:persistent="true"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
-        <provider
-            android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.lineageos.settings.device"
-            android:multiprocess="false"
-            android:grantUriPermissions="true"
-            android:permission="android.permission.READ_SEARCH_INDEXABLES"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
-            </intent-filter>
-        </provider>
-
-        <activity
-            android:name=".ButtonSettingsActivity"
-            android:label="@string/button_panel_title">
-            <intent-filter>
-                <action android:name="org.lineageos.settings.device.ADDITIONAL_BUTTONS_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".KeyHandler" />
-
         <receiver android:name=".BootCompletedReceiver" >
-            <intent-filter>
+            <intent-filter android:priority="99" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-    </application>
 
+        <service android:name=".PocketModeService"
+                 android:permission="PocketModeService">
+        </service>
+
+        <activity android:name="PocketMode"
+                  android:label="PocketMode"
+                  android:excludeFromRecents="true"
+                  android:launchMode="singleInstance"
+                  android:screenOrientation="portrait"
+                  android:windowAnimationStyle="@null">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+    </application>
 </manifest>

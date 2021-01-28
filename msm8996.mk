@@ -140,7 +140,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0 \
     camera.msm8996 \
     libmm-qcamera \
-    libfui \
     libstdc++.vendor
 
 # Common init scripts

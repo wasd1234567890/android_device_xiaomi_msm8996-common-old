@@ -76,7 +76,7 @@ function blob_fixup() {
 
     # Camera hax
     vendor/lib/libmmcamera2_stats_modules.so)
-        sed -i "s|libgui.so|libfui.so|g" "${2}"
+        patchelf --remove-needed "libgui.so" "${2}"
         sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "${2}"
         patchelf --remove-needed libandroid.so "${2}"
         ;;

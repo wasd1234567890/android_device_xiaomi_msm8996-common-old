@@ -193,6 +193,7 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/msm8996-common/BoardConfigVendor.mk

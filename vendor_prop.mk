@@ -125,10 +125,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_default_color_mode=1 \
     vendor.gralloc.enable_fb_ubwc=1
 
-# HWUI
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.render_ahead=1
-
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480 \

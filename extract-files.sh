@@ -66,11 +66,11 @@ function blob_fixup() {
         sed -i "s|activity_recognition.msm8937.so|activity_recognition.msm8996.so|g" "${2}"
         ;;
 
-    vendor/lib/hw/keystore.msm8996.so | vendor/lib64/hw/keystore.msm8996.so)
+    vendor/lib64/hw/keystore.msm8996.so)
         sed -i "s|keystore.msm8953.so|keystore.msm8996.so|g" "${2}"
         ;;
 
-    vendor/lib/hw/gatekeeper.msm8996.so | vendor/lib64/hw/gatekeeper.msm8996.so)
+    vendor/lib64/hw/gatekeeper.msm8996.so)
         sed -i "s|gatekeeper.msm8953.so|gatekeeper.msm8996.so|g" "${2}"
         ;;
 

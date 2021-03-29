@@ -32,7 +32,7 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
-# Audio libraries - from LA.UM.7.5.r1-05300-8x96.0
+# Audio libraries - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so|be45395be21d69e9810827cdec2c6d7c383ce143
 vendor/lib/libacdbrtac.so
@@ -358,9 +358,8 @@ vendor/lib64/libvpplibrary.so
 vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8996.so
 vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8996.so
 
-# Listen - from LA.UM.7.5.r1-05300-8x96.0
-vendor/lib64/hw/sound_trigger.primary.msm8996.so
-vendor/lib/hw/sound_trigger.primary.msm8996.so
+# Listen - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/lib/hw/sound_trigger.primary.msm8937.so:vendor/lib/hw/sound_trigger.primary.msm8996.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 

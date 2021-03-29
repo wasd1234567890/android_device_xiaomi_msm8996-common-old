@@ -74,6 +74,10 @@ function blob_fixup() {
         sed -i "s|gatekeeper.msm8953.so|gatekeeper.msm8996.so|g" "${2}"
         ;;
 
+    vendor/lib/hw/sound_trigger.primary.msm8996.so)
+        sed -i "s|sound_trigger.primary.msm8937.so|sound_trigger.primary.msm8996.so|g" "${2}"
+        ;;
+
     # Camera hax
     vendor/lib/libmmcamera2_stats_modules.so)
         patchelf --remove-needed "libgui.so" "${2}"

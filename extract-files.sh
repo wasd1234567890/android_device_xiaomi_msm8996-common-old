@@ -67,11 +67,11 @@ function blob_fixup() {
         ;;
 
     vendor/lib64/hw/keystore.msm8996.so)
-        sed -i "s|keystore.msm8953.so|keystore.msm8996.so|g" "${2}"
+        sed -i "s|keystore.msm8937.so|keystore.msm8996.so|g" "${2}"
         ;;
 
     vendor/lib64/hw/gatekeeper.msm8996.so)
-        sed -i "s|gatekeeper.msm8953.so|gatekeeper.msm8996.so|g" "${2}"
+        sed -i "s|gatekeeper.msm8937.so|gatekeeper.msm8996.so|g" "${2}"
         ;;
 
     vendor/lib/hw/sound_trigger.primary.msm8996.so)

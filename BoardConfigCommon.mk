@@ -155,7 +155,7 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_xiaomi
 TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2020-11-05
+VENDOR_SECURITY_PATCH := 2021-02-05
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk

@@ -102,6 +102,10 @@ function blob_fixup() {
         sed -i "s|/data/vendor/camera/cam_socket%d|/data/vendor/qcam/camer_socket%d|g" "${2}"
         ;;
 
+    # WFD
+    system/lib/libwfdmmsink.so)
+        patchelf --add-needed "libshim_wfdmmsink.so" "${2}"
+
     esac
 }
 

@@ -126,7 +126,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.data.mode=concurrent \
     persist.data.netmgrd.qos.enable=true \
-    ro.vendor.use_data_netmgrd=true
+    ro.vendor.use_data_netmgrd=true \
+    ro.telephony.iwlan_operation_mode=legacy
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -240,6 +241,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.use_old_mnc_mcc_format=true \
     persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.aosp_usr_pref_sel=true
+
+# Radio (IMS)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.ims.disableIMSLogs=1 \
+    persist.vendor.ims.disableADBLogs=1 \
+    persist.vendor.ims.disableDebugDataPathLogs=1 \
+    persist.vendor.ims.disableDebugLogs=1 \
+    persist.vendor.ims.disableSigHandler=1 \
+    persist.vendor.ims.disableQXDMLogs=1
 
 # TimeService
 PRODUCT_PROPERTY_OVERRIDES += \

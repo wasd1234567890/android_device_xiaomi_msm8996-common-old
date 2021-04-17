@@ -137,7 +137,12 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.device@3.3:64 \
+    android.hardware.camera.device@3.4:64 \
+    android.hardware.camera.device@3.5:64 \
+    android.hardware.camera.provider@2.5:64 \
+    android.hardware.camera.provider@2.6:64 \
+    android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.common@1.0 \
     camera.msm8996 \
@@ -348,11 +353,6 @@ PRODUCT_ODM_PROPERTIES += \
 PRODUCT_PACKAGES += \
     libjson
 
-# Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
-
 # Recorder
 PRODUCT_PACKAGES += \
     Recorder
@@ -367,11 +367,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4 \
-    android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
     libavservices_minijail.vendor \
-    libprotobuf-cpp-full \
     librmnetctl \
     libxml2
 

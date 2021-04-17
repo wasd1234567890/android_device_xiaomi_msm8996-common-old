@@ -170,6 +170,7 @@ vendor/lib64/libssd.so
 # DSP - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
@@ -311,6 +312,7 @@ vendor/firmware/a530v3_seq.fw2
 # Media - from LA.UM.9.6.2.r1-04100-89xx.0
 system_ext/lib/libmmosal.so
 system_ext/lib64/libmmosal.so
+vendor/etc/seccomp_policy/mediacodec.policy
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so

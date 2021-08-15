@@ -100,7 +100,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1 \
-    vendor.qcom.bluetooth.soc=rome \
+    persist.vendor.qcom.bluetooth.soc=rome \
     ro.vendor.bluetooth.wipower=false \
     ro.vendor.bluetooth.emb_wp_mode=false \
     ro.vendor.bt.bdaddr_path=/mnt/vendor/persist/bluetooth/bt_mac

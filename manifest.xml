@@ -369,7 +369,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.bluetooth_sar</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IBluetoothSar</name>
             <instance>default</instance>
@@ -378,7 +378,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.btconfigstore</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.0</version>
         <interface>
             <name>IBTConfigStore</name>
             <instance>default</instance>
@@ -473,7 +473,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
         <transport>hwbinder</transport>
-        <version>1.6</version>
+        <version>1.7</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>

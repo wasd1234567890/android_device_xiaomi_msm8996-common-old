@@ -400,7 +400,7 @@ PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Qcom soong namespace
-QCOM_SOONG_NAMESPACE := hardware/qcom-caf/msm8996-r
+QCOM_SOONG_NAMESPACE := $(LOCAL_PATH)/qcom-caf
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

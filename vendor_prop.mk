@@ -233,6 +233,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.default_cdma_sub=0 \
     ro.telephony.default_network=20,20 \
+    persist.sys.fflag.override.settings_provider_model=false \
     persist.vendor.net.doxlat=true \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.force_on_dc=true \

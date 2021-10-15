@@ -106,6 +106,9 @@ function blob_fixup() {
     system/lib/libwfdmmsink.so)
         patchelf --add-needed "libshim_wfdmmsink.so" "${2}"
 
+    system/lib64/lib-imsvideocodec.so )
+        patchelf --add-needed "lib-imsvtshim.so" "${2}"
+        ;;
     esac
 }
 

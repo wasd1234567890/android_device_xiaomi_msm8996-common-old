@@ -200,6 +200,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     iorapd.perfetto.enable=true \
     iorapd.readahead.enable=true
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.video.disable.ubwc=1 \

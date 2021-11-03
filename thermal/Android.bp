@@ -31,6 +31,7 @@ cc_binary {
     "-Werror",
     "-Wextra",
     "-Wunused",
+    "-Wno-deprecated-declarations",
   ],
   tidy: true,
   tidy_checks: [

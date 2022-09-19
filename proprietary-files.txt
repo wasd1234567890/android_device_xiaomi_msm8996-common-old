@@ -222,20 +222,6 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|16baab27397ad493e845515c20ac0c0
 vendor/lib64/hw/gatekeeper.msm8937.so:vendor/lib64/hw/gatekeeper.msm8996.so|391b9ded894fb581fab3f5c742236b11e2e61a7b
 
 # GPS - from LA.UM.9.6.2.r1-04200-89xx.0
-system_ext/etc/permissions/com.qti.location.sdk.xml
-system_ext/etc/permissions/com.qualcomm.location.xml
-system_ext/etc/permissions/izat.xt.srv.xml
-system_ext/etc/permissions/privapp-permissions-com.qualcomm.location.xml
-system_ext/framework/com.qti.location.sdk.jar
-system_ext/framework/izat.xt.srv.jar
--system_ext/priv-app/com.qualcomm.location/com.qualcomm.location.apk
-system_ext/lib64/vendor.qti.gnss@1.0.so
-system_ext/lib64/vendor.qti.gnss@1.1.so
-system_ext/lib64/vendor.qti.gnss@1.2.so
-system_ext/lib64/vendor.qti.gnss@2.0.so
-system_ext/lib64/vendor.qti.gnss@2.1.so
-system_ext/lib64/vendor.qti.gnss@3.0.so
-system_ext/lib64/vendor.qti.gnss@4.0.so
 vendor/bin/loc_launcher|684028ffab3ef293a241386710fe5855d2b2f70a
 vendor/bin/lowi-server|16b04916e2e8672d63238c3753c52d70f2758b06
 vendor/bin/slim_daemon|6d33f6f82549c62dc932464dbd7589f595f6b779

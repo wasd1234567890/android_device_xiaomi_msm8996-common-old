@@ -172,10 +172,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     init.bt.sh
 
-# Component overrides
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
-
 # Config Store
 PRODUCT_PACKAGES += \
     disable_configstore

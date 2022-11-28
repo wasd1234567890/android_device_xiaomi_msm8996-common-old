@@ -194,11 +194,13 @@ PRODUCT_PACKAGES += \
     memtrack.msm8996 \
     libdisplayconfig \
     libdisplayconfig.qti \
+    libgralloc.system.qti \
     libqdMetaData \
+    libtinyxml \
+    libvulkan \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0.vendor \
-    libtinyxml \
-    libvulkan
+    vendor.qti.hardware.display.mapper@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calib.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_config.cfg \

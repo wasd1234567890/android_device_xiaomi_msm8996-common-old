@@ -441,14 +441,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libnl \
-    libshim_wfdmmsink
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 # Xiaomi Ringtone
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/MI.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/MI.ogg \

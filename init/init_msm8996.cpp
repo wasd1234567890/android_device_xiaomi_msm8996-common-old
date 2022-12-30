@@ -114,7 +114,10 @@ static void workaround_snet_properties() {
   for (int i = 0; snet_prop_key[i]; ++i) {
     property_override(snet_prop_key[i], snet_prop_value[i]);
   }
+}
 
+static void hide_selinux_status()
+{
   chmod("/sys/fs/selinux/enforce", 0640);
   chmod("/sys/fs/selinux/policy", 0440);
 }
@@ -128,4 +131,5 @@ void vendor_load_properties()
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
     // Workaround SafetyNet
     workaround_snet_properties();
+    hide_selinux_status();
 }

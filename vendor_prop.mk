@@ -173,6 +173,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=440 \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \

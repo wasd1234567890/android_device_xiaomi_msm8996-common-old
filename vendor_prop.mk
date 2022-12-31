@@ -198,6 +198,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
+# Logging
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.log.tag.DrmLibTime=S \
+    persist.log.tag.QC-time-services=S
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.video.disable.ubwc=1 \

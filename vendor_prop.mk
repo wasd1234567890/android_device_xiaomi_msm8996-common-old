@@ -190,14 +190,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     service.qti.ims.enabled=1 \
     vendor.service.qti.ims.enabled=1
 
-# Iorap
-PRODUCT_PROPERTY_OVERRIDES += \
-    iorapd.perfetto.enable=true \
-    iorapd.readahead.enable=true
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-
 # Logging
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.DrmLibTime=S \

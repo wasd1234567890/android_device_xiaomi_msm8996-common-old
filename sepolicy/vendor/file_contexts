@@ -38,7 +38,6 @@
 /(mnt/vendor)/persist/PSensor3cm_ct\.txt           u:object_r:sensors_persist_file:s0
 
 # Binaries
-/(vendor|system/vendor)/bin/chargeonlymode            u:object_r:vendor_charger_exec:s0
 /(vendor|system/vendor)/bin/tinymix			u:object_r:vendor_tinyalsa_exec:s0
 /(vendor|system/vendor)/bin/tfa-calib                 u:object_r:tfa-calib_exec:s0
 

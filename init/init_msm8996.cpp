@@ -131,5 +131,5 @@ void vendor_load_properties()
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
     // Workaround SafetyNet
     workaround_snet_properties();
-    hide_selinux_status();
+    //hide_selinux_status();
 }

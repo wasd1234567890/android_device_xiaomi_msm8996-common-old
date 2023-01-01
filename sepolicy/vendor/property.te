@@ -1,3 +1,4 @@
 type system_panel_prop, property_type;
-type thermal_prop, property_type;
-type vendor_power_prop, property_type;
+vendor_internal_prop(vendor_thermal_prop);
+vendor_internal_prop(vendor_power_prop);
+vendor_restricted_prop(vendor_mwqem_prop);

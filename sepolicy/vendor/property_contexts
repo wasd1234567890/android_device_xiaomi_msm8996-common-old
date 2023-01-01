@@ -1,10 +1,28 @@
 service.soundcard.         u:object_r:audio_prop:s0
 audio.                     u:object_r:audio_prop:s0
 
+camera.                    u:object_r:camera_prop:s0
+cameradaemon.              u:object_r:camera_prop:s0
+cpp.set.clock              u:object_r:camera_prop:s0
+disable.cpp.power.collapse u:object_r:camera_prop:s0
 dual.camera.cs.br          u:object_r:camera_prop:s0
+persist.cam.               u:object_r:camera_prop:s0
 persist.camera.            u:object_r:camera_prop:s0
+persist.debug.sf.showfps   u:object_r:camera_prop:s0
+persist.enable.max.pending.buf    u:object_r:camera_prop:s0
+persist.partial.skip       u:object_r:camera_prop:s0
+ro.camera.                 u:object_r:camera_prop:s0
+ubwc.no.compression        u:object_r:camera_prop:s0
+
+ro.cust.test               u:object_r:exported_system_prop:s0
+
+persist.vendor.mwqem.      u:object_r:vendor_mwqem_prop:s0
+
+
+ro.qti.sensors.            u:object_r:vendor_sensors_prop:s0
 
 persist.net.doxlat         u:object_r:vendor_xlat_prop:s0
+rild.libpath               u:object_r:vendor_radio_prop:s0
 ro.sys.oem.sno             u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag0          u:object_r:vendor_radio_prop:s0
 sys.fake_bs_flag1          u:object_r:vendor_radio_prop:s0
@@ -15,8 +33,8 @@ sys.listeners.registered   u:object_r:vendor_tee_listener_prop:s0
 
 sys.panel.                 u:object_r:system_panel_prop:s0
 
-vendor.thermal.config      u:object_r:thermal_prop:s0
+vendor.thermal.config      u:object_r:vendor_thermal_prop:s0
 
 wifi.active.               u:object_r:wifi_hal_prop:s0
 
-vendor.powerhal.                               u:object_r:vendor_power_prop:s0
+vendor.powerhal.           u:object_r:vendor_power_prop:s0

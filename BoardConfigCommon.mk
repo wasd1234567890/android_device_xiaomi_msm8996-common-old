@@ -189,12 +189,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
 
-# RisingOS Specific Settings
-RISING_CHIPSET := "Snapdragon 821"
-RISING_MAINTAINER := "demonbro"
-WITH_GMS := true
-TARGET_CORE_GMS := true
-BUILD_BROKEN_DUP_RULES := true
-
 # Inherit from the proprietary version
 -include vendor/xiaomi/msm8996-common/BoardConfigVendor.mk
